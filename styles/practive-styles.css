@@ -1,0 +1,32 @@
+body{
+    text-align: center;
+    background-image: url('images/Isaac_photo_name_thing.jpg'); /* Replace with your image URL */
+background-repeat: repeat; 
+}
+img{
+    max-width: 880px;
+    border:10px solid #31b9c6;
+}
+
+nav{
+    background-color: #38e0ef;
+    overflow: hidden;
+    padding: 100px;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+h1{
+    font-size: 50px;
+}
+footer{
+    background-color: #31b9c6;
+    
+    color: white;
+    padding: 10px;
+    /*position: fixed;*/
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
