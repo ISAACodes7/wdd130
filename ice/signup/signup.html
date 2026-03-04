@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Feed Sign Up</title>
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            background: rgb(120, 96, 64);
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        #formContainer {
+            position: relative;
+            display: grid;
+            background-color: white;
+            border-radius: 1.5em;
+            max-width: 400px;
+            max-height: 1000;
+            text-align: center;
+            border: 7px solid #1a3474; 
+            margin-top: 0px;
+            justify-content: center;
+        }
+        #closebtn {
+            position: absolute;
+            top: 10px;
+            left: 15px;
+        }
+        header {
+            overflow: hidden;
+            position: relative;
+            max-height: 170px;
+        }
+        header img {
+            max-width: 100%;
+            position: relative;
+            top: 0px;
+            border-radius: 1em;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        h1{
+            position: absolute;
+            text-shadow: 3px 2px 2px black;
+            top: 50%;
+            color: white;
+            text-shadow: 12px;
+            left: 30%; 
+        }
+        h2{
+            position: absolute;
+            text-shadow: 3px 2px 2px black;
+            top: 70%;
+            color: white;
+            text-shadow: 12px;
+            left: 28%;
+        }
+        h3{
+            position: absolute;
+            text-align: center;
+            top: 35%;
+            left: 15%;
+
+        }
+
+        #myForm{
+            background-color: white;
+            display: grid;
+            max-width: 100%;
+            grid-template-columns:  1fr 2fr;
+            margin-top: 30px;
+            gap: 10px;
+            /*position: absolute;*/
+            
+            width: 100%;
+            top: 70%;
+            left: 0px;
+        }
+        #closeBtn{
+            position: absolute;
+            left: 10px;
+            top: 15px;
+        }
+                label{
+            text-align: left;
+            
+        }
+        input{
+            text-align: right;}
+        #imagebar{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            gap: 5px;
+            overflow: hidden;
+
+        }
+        #myForm section{
+            grid-column: 1/-1;
+        }
+        #scriptimg {
+            max-width: 70px;
+        }
+
+        
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <div id="formContainer">
+        <header>
+            <img src = "images/jesus_feeds_5000.jpeg">
+            <h1><strong>Daily Feed</strong></h1>
+            <h2><strong>Scripture a Day</strong></h2>
+        </header>
+        <form id="myForm">
+            <h3>Sign Up for Daily Scripture Feed</h3>
+            <button type="button" id="closeBtn">X</button>
+            <label for="username">User Name:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label>Gender:</label>
+            <div>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label>
+            </div>
+
+            <section>
+                <input type="checkbox" id="newsletter" name="newsletter">
+                <label for="newsletter">Subscribe to newsletter</label>
+            </section>
+
+            <section>
+                <input type="checkbox" id="conditions" name="conditions" required>
+                <label for="conditions">I acknowledge the terms and conditions</label>
+            </section>
+
+            <section>
+                <button type="submit">Submit</button>
+            </section>
+        </form>
+        <section id = "imagebar">
+            <img id = "scriptimg" src="images/old_testament.webp" alt="old testament">
+            <img id = "scriptimg" src="images/new_testament.webp" alt="New Testament">
+            <img id = "scriptimg" src="images/book_of_mormon.webp" alt="BOM">
+            <img id = "scriptimg" src="images/doctrine_and_covenants.webp" alt="D and C">
+            <img id = "scriptimg" src="images/pearl_of_great_price.webp" alt="Pearl of Great price">
+            </section>
+    </div>
+
+    <div id="output"></div>
+
+    <script>
+        // Here is some Javascript to start looking forward to wdd131
+        document.getElementById("closeBtn").addEventListener("click", function () {
+            document.getElementById("formContainer").style.display = "none";
+         });
+        const form = document.getElementById('myForm');
+        const output = document.getElementById('output');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Stop form from actually submitting
+
+            const formData = new FormData(form);
+            const entries = [];
+
+            for (const [key, value] of formData.entries()) {
+                if (key == "password") {
+                    entries.push(`<strong>${key}</strong>: ${value} (you should probably encrypt the password)`);
+                } else {
+                    entries.push(`<strong>${key}</strong>: ${value}`);
+                }
+            }
+
+            output.innerHTML = `
+            <br>  
+            <h3>Here is the data that would be sent to the server:</h3>
+            <ul>
+                ${entries.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+            `;
+                });
+    </script>
+
+</body>
+
+</html>
