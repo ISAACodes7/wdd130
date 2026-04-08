@@ -1,0 +1,68 @@
+header{
+    background-color: bisque;
+    border-bottom: 3px black solid;
+}
+#navbox{
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+}
+header img{
+    max-height: 50px;
+    max-width: 50px;
+    padding: 15px;
+}
+.menu{   
+    margin-left: auto;
+    padding: 10px;
+
+}
+#pb{
+    width: 100%;
+    height: 300px;
+}
+main{
+    text-align: center;
+    max-width: 1000px;
+}
+#hero {
+    max-width: 1000px;
+    position: absolute;
+    padding: 15px;
+    top: 200px;
+    background-color: white;
+}
+#hero h1{
+    text-align: center;
+    background-color: white;
+}
+#cakebox h3{
+    text-align: center;
+}
+#cakemenu{
+    background-color: beige;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#cakemenu img{
+    max-width: 100%;
+}
+#cookratio{
+    background-color: white;
+    grid-column: 1/2;
+}
+#Cakeingred{
+    background-color: rgb(26, 31, 36);
+    grid-column: 2/3;
+    color: white;
+}
+
+
+
+footer{
+    background-color: antiquewhite;
+}
+body{
+    background-color: antiquewhite;
+}

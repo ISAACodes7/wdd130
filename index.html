@@ -4,31 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isaac Parsons | WDD130 | Home</title>
+    <link rel="stylesheet" href="indexstyle.css">
     <!-- comment-->
 
 </head>
 <body>
     <header>
-        <img src="images/logo.png" alt ="logo">
-        <nav> <h1>Portal Page</h1>
-            <button>|||</button>
-            <div id = "navBut">
-                <a href="index.html">HOME</a>
-                <a href="wwr/index.html">WWR</a>
-                <a href="site-plan-rafting.html">White Water Rafting Siteplan</a>
-                <a href="ice/ice_home.html">ICE</a>
-                <a href="#">About Me</a>
-                <a href="#">Personal Siteplan</a>
+        
+        <nav>
+            <div id="navbox">
+                <img src="images/logo.png" alt ="logo">
+                <h1>Portal Page</h1>
+
+                <div class = "menu">
+                    <a href="index.html">HOME</a>
+                    <a href="wwr/index.html">WWR</a>
+                    
+                    <a href="ice/ice_home.html">ICE</a>
+                    <a href="#">About Me</a>
+                </div>
             </div>
             
         </nav>
     </header>
     <main>
         <img id="pb" src="images/portalblue.png" alt = "PortalBlue">
+        <div id = "hero">
         <h1>Isaac Parsons</h1>
         
         <p>I am Isaac. I have a Cake mix Box I am taking the Cybersecurity major hear at BYUI, I enjoy Coding, listening to music, biking, hiking, Blacksmithing, and doing random stuff on thursday evenings.</p>
         <p>Top scripture is Jacob 6:12: O be wise; What can I say more?</p>
+        </div>
         <div id="cakebox">
             <form>
                 <h3>Do you want cake</h3>
@@ -38,14 +44,18 @@
                 <input type = "radio" id="TheyDon'tCake" name="cake">
                 <label for = "Theydon'tCake">No Cake</label>
             </form>
-            <div id = "Cakeingred">
-                <ul>
-                    <li> 1 cup water
-                    </li>
-                    <li>1/2 cup vegtable oil</li>
-                    <l1>3 eggs</l1>
-                    <li>1 box of cake mix</li>
-                </ul>
+            <section id = "cakemenu">
+                <img src="images/cake-1920-983077.jpg" alt = "cake">
+                <div id = "Cakeingred">
+                    <ul>
+                        <li> 1 cup water
+                        </li>
+                        <li>1/2 cup vegtable oil</li>
+                        <l1>3 eggs</l1>
+                        <li>1 box of cake mix</li>
+                    </ul>
+                </div>
+                
                 <table id="cookratio">
                     <tr id="lable">
                         <th>Pan size</th>
@@ -68,7 +78,9 @@
                         <th>14-19</th>
                     </tr>
                 </table>
-            </div>
+                <img src="images/whole-fancy-chocolate-cake-white-background_908985-33714.avif">
+            </section>
+            
         </div>
         <img src="images/portalboth.png" alt="portal orange">
 
