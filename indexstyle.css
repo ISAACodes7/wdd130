@@ -60,7 +60,10 @@ main{
     color: white;
 }
 
-
+section{
+    text-align: start;
+    padding: 15px;
+}
 
 footer{
     background-color: antiquewhite;
