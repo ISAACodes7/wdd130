@@ -1,6 +1,7 @@
 /* CSS - Name: "positionstyles.css" */
 /* Activity 1 styles */
 .content1 {
+max-width: 300px;
   /* This is the parent of the activity 1 boxes. */
 display: grid;
 grid-template-columns: 1fr 1fr;
@@ -256,7 +257,7 @@ gap: 10px;
   position: absolute;
   background-color: black;
   width: 3px;
-  
+
   height: 9px;
 }
 .hint i:before {
